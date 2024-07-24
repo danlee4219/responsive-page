@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 3</title>
+
+    <style>
+        *{
+            margin: 0;
+        }
+
+        #box{
+            margin: 20px;
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            grid-template-rows:60px 640px;
+            gap: 10px;
+            grid-template-areas:
+            "yellow yellow"
+            "red green" ;
+        }
+        @media all and (max-width:749px){
+            #box{
+                grid-template-columns: repeat(1, 1fr);
+                grid-template-rows: 100px repeat(2, 250px);
+                grid-template-areas: 
+                "yellow"
+                 "red"
+                 "green";
+            }
+        }
+        #box>div{
+            padding: 10px;
+        }
+
+        #box>div:nth-child(1){
+            background-color: yellow;
+            grid-area: yellow;
+            font-size: 30px;
+            align-content: center;
+        }
+
+        #box>div:nth-child(2){
+            background-color: red;
+            grid-area: red;
+        }
+        #box>div:nth-child(3){
+            background-color: green;
+            grid-area: green;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="box">
+        <div>Navigation</div>
+        <div>Left box</div>
+        <div>Right box</div>
+    </div>
+
+    
+</body>
+</html>

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 1</title>
+    <style>
+        *{
+            margin: 0;
+        
+        }
+        #box{
+            background-color: papayawhip;
+            padding: 10px;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: repeat(3,230px);
+            gap: 20px;
+            grid-template-areas:
+            "one two three"
+            "four five six"
+            "seven eight nine" ;
+
+        }
+
+                /* medium screen: tablets */
+        @media all and (min-width: 750px) and (max-width:900px){
+            #box{
+                
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(5, 200px);
+                grid-template-areas: 
+                "one two"
+                 "three four"
+                 "five six"
+                 "seven eight"
+                 "nine null";
+            }
+        }
+
+         /* small screen: mobiles */
+         @media all and (max-width:749px){
+            #box{
+                grid-template-columns: repeat(1, 1fr);
+                grid-template-rows: repeat(9, 200px);
+                grid-template-areas: 
+                "one"
+                 "two"
+                 "three"
+                 "four"
+                 "five"
+                 "six"
+                 "seven"
+                 "eight"
+                 "nine";
+            }
+        }
+
+
+        #box>div:nth-child(1){
+            grid-area: one;
+            
+        }
+
+        #box>div:nth-child(2){
+            grid-area: two;
+        }
+
+        #box>div:nth-child(3){
+            grid-area: three;
+        }
+
+        #box>div:nth-child(4){
+            grid-area: four;
+        }
+
+        #box>div:nth-child(5){
+            grid-area: five;
+        }
+
+        #box>div:nth-child(6){
+            grid-area: six;
+        }
+
+        #box>div:nth-child(7){
+            grid-area: seven;
+        }
+
+        #box>div:nth-child(8){
+            grid-area: eight;
+        }
+
+        #box>div:nth-child(9){
+            grid-area: nine;
+        }
+
+        #box>div{
+            
+            background-color:white;
+            border-radius: 20px;
+        
+        }
+
+        .om{
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
+        .om>div>h1{
+            font-size: 40px;
+        }
+        .om>div>h2{
+            font-size: 40px;
+            color: goldenrod;
+        }
+        #box>div>p{
+            padding: 20px;
+            font-size: 25px;
+            color: grey;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <div id="head">
+            <div class="om">
+                <div>
+                    <h1>Cappuccino</h1>
+                </div>
+                <div>
+                    <h2>$49</h2>
+                </div>
+
+            </div>
+            <p>usage of the internet is becoming more common due to rapid advance.</p>
+
+        </div>
+        <div id="head">
+            <div class="om">
+                <div>
+                    <h1>Americano</h1>
+                </div>
+                <div>
+                    <h2>$49</h2>
+                </div>
+
+            </div>
+            <p>usage of the internet is becoming more common due to rapid advance.</p>
+        </div>
+        <div id="head">
+            <div class="om">
+            <div>
+                <h1>Espresso</h1>
+            </div>
+            <div>
+                <h2>$49</h2>
+            </div>
+
+            </div>
+            <p>usage of the internet is becoming more common due to rapid advance.</p>
+        </div>
+        <div id="head">
+            <div class="om">
+                <div>
+                    <h1>Macchiato</h1>
+                </div>
+                <div>
+                    <h2>$49</h2>
+                </div>
+
+            </div>
+            <p>usage of the internet is becoming more common due to rapid advance.</p>
+        </div>
+        <div id="head">
+            <div class="om">
+                <div>
+                    <h1>Mocha</h1>
+                </div>
+                <div>
+                    <h2>$49</h2>
+                </div>
+
+            </div>
+            <p>usage of the internet is becoming more common due to rapid advance.</p>
+        </div>
+        <div id="head">
+            <div class="om">
+                <div>
+                    <h1>Coffee Latte</h1>
+                </div>
+                <div>
+                    <h2>$49</h2>
+                </div>
+
+            </div>
+            <p>usage of the internet is becoming more common due to rapid advance.</p>
+        </div>
+        <div id="head">
+            <div class="om">
+                <div>
+                    <h1>Piccoio Latte</h1>
+                </div>
+                <div>
+                    <h2>$49</h2>
+                </div>
+
+            </div>
+            <p>usage of the internet is becoming more common due to rapid advance.</p>
+        </div>
+        <div id="head">
+            <div class="om">
+                <div>
+                    <h1>Ristretto</h1>
+                </div>
+                <div>
+                    <h2>$49</h2>
+                </div>
+
+            </div>
+            <p>usage of the internet is becoming more common due to rapid advance.</p>
+        </div>
+        <div id="head">
+            <div class="om">
+                <div>
+                    <h1>Affogato</h1>
+                </div>
+                <div>
+                    <h2>$49</h2>
+                </div>
+
+            </div>
+            <p>usage of the internet is becoming more common due to rapid advance.</p>
+        </div>
+
+    </div>
+    
+</body>
+</html>

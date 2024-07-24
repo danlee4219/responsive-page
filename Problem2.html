@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 2</title>
+    <style>
+        *{
+            margin: 0;
+        }
+        #box{
+            padding: 10px;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: 240px 400px;
+            gap: 10px;
+            grid-template-areas: 
+            "heading heading heading"
+            "boxone boxtwo boxthree";
+        }
+         /* medium screen: tablets */
+         @media all and (min-width: 750px) and (max-width:900px){
+            #box{
+                grid-template-columns: repeat(2,1fr);
+                grid-template-rows: auto repeat(2, 200px);
+                grid-template-areas: 
+                "heading heading "
+                 "boxone boxtwo"
+                  "boxthree null";
+            }
+        }
+
+
+         /* small screen: mobiles */
+         @media all and (max-width:749px){
+            #box{
+                grid-template-columns: repeat(1, 1fr);
+                grid-template-rows: auto repeat(3, 200px);
+                grid-template-areas: 
+                "heading"
+                 "boxone"
+                 "boxtwo"
+                 "boxthree";
+            }
+        }
+
+        #box>div:nth-child(1){
+            grid-area: heading;
+        }
+
+        #box>div:nth-child(2){
+        
+            grid-area: boxone;
+        }
+
+        #box>div:nth-child(3){
+            
+            grid-area: boxtwo;
+        }
+        #box>div:nth-child(4){
+            
+            grid-area: boxthree;
+        }
+
+        .heading{
+            text-align: center;
+
+        }
+
+        .heading>h1{
+            color: goldenrod;
+            margin-top: 20px;
+            
+            font-size: 60px;
+
+        }
+        .heading>p{
+            margin-top: 10px;
+            font-size: 17px;
+        }
+
+        img{
+            
+            width:100%;
+            height: 70%;
+        }
+
+        .card{
+            text-align: center;
+        }
+
+        .card>p{
+            margin-top: 10px;
+            color: goldenrod;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <div id="box">
+
+        <div class="heading">
+            <h1>Rooms & Suits</h1>
+            <p>Far far away, Behind the word mountains, far from the countries Vokalia and consonantia, there<br> live the blind text. Separated they live in Bookmarksgrove right at the coast of the Semantics, a<br> large language ocean</p>
+        </div>
+        <div class="card">
+            <img src="https://preview.colorlib.com/theme/sogo/images/img_1.jpg" alt="">
+            <h2>Single Room</h2>
+            <p>90$/PER NIGHT</p>
+        </div>
+        <div class="card">
+            <img src="https://preview.colorlib.com/theme/sogo/images/img_2.jpg" alt="">
+            <h2>Family Room</h2>
+            <p>120$/PER NIGHT</p>
+        </div>
+        <div class="card">
+            <img src="https://preview.colorlib.com/theme/sogo/images/img_3.jpg" alt="">
+            <h2>Presidential Room</h2>
+            <p>250$/PER NIGHT</p>
+        </div>
+    </div>
+    
+</body>
+</html>
